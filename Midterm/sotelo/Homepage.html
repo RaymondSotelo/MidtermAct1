@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Homepage</h1>
-    <a href="http://localhost/sotelo/index.php">Return</a>
+<div class="notifCon">
+    <form action="display.php">
+        <div>
+            <?php
+            $file = "studentInfo.txt";
+
+            $myfile = fopen($file, "w") or die("Unable to open file!");
+            fclose($myfile);
+
+            echo "Student info cleared successfuly!";
+            ?>
+        </div>
+        <br>
+        <div>
+             <input type="Submit" value="Return">
+        </div>  
+    </form>
+</div>
 </body>
 </html>
